@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Football Stadium</title>
+		<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+		<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+	</head>
+	<body>
+		<div id="map" style="height: 600px"></div>
+		<script>
+			var map = L.map('map').setView([13.7563, 100.5018], 10);
+			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
+			
+			var aIcon = L.icon({
+			iconUrl: 'ArmyStadium.jpg',
+			iconSize:     [85, 70], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([13.783540990568639, 100.55665737950895], {icon: aIcon}).addTo(map).bindPopup("<b>สนามกีฬากองทัพบก</b>");
+
+			var bIcon = L.icon({
+			iconUrl: 'CUStadium.jpg',
+			iconSize:     [85, 70], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([13.73773190988005, 100.5258637172955], {icon: bIcon}).addTo(map).bindPopup("<b>สนามกีฬาจุฬาลงกรณ์</b>");
+
+			var cIcon = L.icon({
+			iconUrl: 'PEStadium.jpg',
+			iconSize:     [85, 70], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([13.745958049944218, 100.52573798804784], {icon: cIcon}).addTo(map).bindPopup("<b>สนามศุภชลาศัย</b>");
+
+			var dIcon = L.icon({
+			iconUrl: 'RajStadium.jpg',
+			iconSize:     [85, 70], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([13.755874232721878, 100.62205524310373], {icon: dIcon}).addTo(map).bindPopup("<b>ราชมังคลากีฬาสถาน</b>");
+
+			var eIcon = L.icon({
+			iconUrl: 'TrueStadium.jpg',
+			iconSize:     [85, 70], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([14.06848823179617, 100.59884888336347], {icon: eIcon}).addTo(map).bindPopup("<b>สนามกีฬามหาวิทยาลัยธรรมศาสตร์</b>");
+		</script>
+	</body>
+</html>
